@@ -17,8 +17,11 @@ Save the key files as id_rsa_[name], e.g. id_rsa_gitgmailpersonal. This generate
 If the .config folder doesn’t exist in the C:\Users\[user]\.ssh\ folder, create one using touch config command.Open the file and paste the following:
 
 *#Personal GitHub*
+
 *Host [uniquename] # e.g. git-gmailpersonal*
+
   *HostName [real hostname] # e.g. github.com*
+
   *IdentityFile [path to the ssh private key just created] # e.g. ~/.ssh/id_rsa_gitgmailpersonal*
 
 ### 5. Test it out
@@ -26,8 +29,11 @@ If the .config folder doesn’t exist in the C:\Users\[user]\.ssh\ folder, creat
 Create a new test folder named test. On the git terminal type the following commands to add a commit to the local repo:
 
 *git init*
+
 *touch readme.txt*
+
 *git add .*
+
 *git commit -m “First commit”*
 
 Login into the git provider to create a new repository named test and push the local repo to the remote repository.
