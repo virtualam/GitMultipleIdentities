@@ -8,7 +8,9 @@ There might be cases where you have multiple git accounts  one on GitHub, anothe
 
 Save the key files as id_rsa_[name], e.g. id_rsa_gitgmailpersonal. This generates a public/private key pair in the chosen directory, usually C:\Users\[user]\.ssh\.
 
-### 2. Save the ssh public key in the git remote account by copying and pasting the .pub file under the SSH public keys section after giving it a name. 
+### 2. Add the SSH public key to the remote git account
+
+Save the ssh public key in the git remote account by copying and pasting the .pub file under the SSH public keys section after giving it a name. 
 
 ### 3. Adding to SSH
 
@@ -24,8 +26,14 @@ Host [uniquename] # e.g. git-gmailpersonal
   HostName [real hostname] # e.g. github.com
   IdentityFile [path to the ssh private key just created] # e.g. ~/.ssh/id_rsa_gitgmailpersonal
 ```
+### 5. Update git account in the config file for the local report
 
-### 5. Test it out
+```
+git config user.name "Name"
+git config user.email "email@example.com"
+```
+
+### 6. Test it out
 
 Create a new test folder named test. On the git terminal type the following commands to add a commit to the local repo:
 
