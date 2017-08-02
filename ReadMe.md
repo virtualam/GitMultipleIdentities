@@ -10,25 +10,29 @@ Save the key files as id_rsa_[name], e.g. id_rsa_gitgmailpersonal. This generate
 
 ### 2. Save the ssh public key in the git remote account by copying and pasting the .pub file under the SSH public keys section after giving it a name. 
 
-###3. Next, because we saved our key with a unique name, we need to tell SSH about it. Within the Terminal, type: ssh-add ~/.ssh/id_rsa_[name]. If successful, you'll see a response of "Identity Added." If ssh-add complains - Could not open a connection to your authentication agent, then execute this - eval "$(ssh-agent)" to explicitly invoke the ssh agent and try again.
+### 3. Next, because we saved our key with a unique name, we need to tell SSH about it. Within the Terminal, type: ssh-add ~/.ssh/id_rsa_[name]. If successful, you'll see a response of "Identity Added." If ssh-add complains - Could not open a connection to your authentication agent, then execute this - eval "$(ssh-agent)" to explicitly invoke the ssh agent and try again.
 
 ### 4. Create/modify the git config file
 
 If the .config folder doesn’t exist in the C:\Users\[user]\.ssh\ folder, create one using touch config command.Open the file and paste the following:
 
-*#Personal GitHub*
-*Host [uniquename] # e.g. git-gmailpersonal*
-  *HostName [real hostname] # e.g. github.com*
-  *IdentityFile [path to the ssh private key just created] # e.g. ~/.ssh/id_rsa_gitgmailpersonal*
+```
+#Personal GitHub
+Host [uniquename] # e.g. git-gmailpersonal
+  HostName [real hostname] # e.g. github.com
+  IdentityFile [path to the ssh private key just created] # e.g. ~/.ssh/id_rsa_gitgmailpersonal
+```
 
 ### 5. Test it out
 
 Create a new test folder named test. On the git terminal type the following commands to add a commit to the local repo:
 
-*git init*
-*touch readme.txt*
-*git add .*
-*git commit -m “First commit”*
+```
+git init
+touch readme.txt
+git add .
+git commit -m “First commit”
+```
 
 Login into the git provider to create a new repository named test and push the local repo to the remote repository.
 
