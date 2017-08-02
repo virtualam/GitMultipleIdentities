@@ -29,6 +29,7 @@ Host [uniquename] # e.g. git-gmailpersonal
 ### 5. Update git account in the config file for the local report
 
 ```
+git init
 git config user.name "Name"
 git config user.email "email@example.com"
 ```
@@ -38,7 +39,6 @@ git config user.email "email@example.com"
 Create a new test folder named test. On the git terminal type the following commands to add a commit to the local repo:
 
 ```
-git init
 touch readme.txt
 git add .
 git commit -m “First commit”
