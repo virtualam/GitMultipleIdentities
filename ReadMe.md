@@ -26,7 +26,7 @@ Host [uniquename] # e.g. git-gmailpersonal
   HostName [real hostname] # e.g. github.com
   IdentityFile [path to the ssh private key just created] # e.g. ~/.ssh/id_rsa_gitgmailpersonal
 ```
-### 5. Update git account in the config file for the local report
+### 5. Update git account in the config file for a specific project
 
 ```
 git init
