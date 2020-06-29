@@ -6,7 +6,7 @@ There might be cases where you have multiple git accounts  one on GitHub, anothe
 
 *ssh-keygen -t rsa -b 4096 -C "email@example.com"*
 
-Save the key files as id_rsa_[name], e.g. id_rsa_gitgmailpersonal. This generates a public/private key pair in the chosen directory, usually C:\Users\[user]\.ssh\.
+Save the key files as id_rsa_[name], e.g. /c/users/.ssh/id_rsa_gitgmailpersonal. This generates a public/private key pair in the chosen directory.
 
 ### 2. Add the SSH public key to the remote git account
 
@@ -18,7 +18,7 @@ Next, because we saved our key with a unique name, we need to tell SSH about it.
 
 ### 4. Create/modify the git config file
 
-If the .config folder doesn’t exist in the C:\Users\[user]\.ssh\ folder, create one using touch config command.Open the file and paste the following:
+If the config file doesn’t exist in the C:\Users\[user]\.ssh\ folder, create one using touch config command.Open the file and paste the following:
 
 ```
 #Personal GitHub
